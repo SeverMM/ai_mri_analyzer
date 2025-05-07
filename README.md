@@ -116,7 +116,7 @@ python -m ai_mri_analyzer C:\MRI\export --batch-size 5 --rpm 3
 python -m ai_mri_analyzer C:\MRI\export \
        --series IMG-0003 IMG-0005 IMG-0022 \
        --prev-flag "possible extraprostatic extension" \
-       --patient-context "Male, 74 y, treated prostate cancer; rising PSA" \
+       --patient-context "Male, 47 y, treated prostate cancer; rising PSA" \
        --batch-size 20
 ```
 
@@ -148,7 +148,7 @@ pytest -q
 
 ## Tips for getting higher-quality model answers
 
-1. **Include concise clinical context** – age, sex, known diagnosis, symptoms, prior treatments.  Example: `patient_context="Male, 74 y, treated prostate cancer; rising PSA"`.
+1. **Include concise clinical context** – age, sex, known diagnosis, symptoms, prior treatments.  Example: `patient_context="Male, 47 y, treated prostate cancer; rising PSA"`.
 2. **Specify series modality & plane** – our prompt already passes the SeriesDescription, but ensure filenames keep clues (e.g. T2_AX).  The model will reason better.
 3. **Focus the task** – replace the default `task_instruction` with a narrower question (e.g. "Assess lymph-node burden and seminal-vesicle invasion").
 4. **Ask for differential** – add "Also list differential diagnoses if findings are ambiguous."
