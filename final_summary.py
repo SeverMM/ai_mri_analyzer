@@ -67,7 +67,7 @@ def generate_final_summary(csv_path: Path, reports_dir: Path, model_name: str = 
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_message},
         ],
-        max_tokens=1024,
+        max_completion_tokens=1024,
     )
 
     summary_text = response.choices[0].message.content.strip()

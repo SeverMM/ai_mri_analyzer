@@ -310,7 +310,7 @@ async def _run_single_batch(
                     model=model_name,
                     messages=messages,
                     stream=True,
-                    max_tokens=1024,  # generous default – adjust as needed
+                    max_completion_tokens=1024,  # generous default – adjust as needed
                     response_format={"type": "json_object"},
                 )
 

@@ -2,8 +2,8 @@
 
 [openai]
 # API key is now read from environment variable OPENAI_API_KEY (see .env file)
-model = "gpt-4o"
-summary_model = "o3"
+model = "gpt-5"
+summary_model = "gpt-5"
 
 [batch]
 size = 20
